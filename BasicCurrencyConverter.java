@@ -16,5 +16,10 @@ public class BasicCurrencyConverter {
             System.out.println("Invalid input. Please enter a numeric value.");
             return;  // Exit the program if the input is invalid
         }
-
+    // Step 4: Convert to GBP
+        double amountInGBP = amountInUSD * exchangeRate;
+    // Step 5: Display the converted amount
+        System.out.println("Amount in GBP: " + amountInGBP);
+  } 
+}
   
