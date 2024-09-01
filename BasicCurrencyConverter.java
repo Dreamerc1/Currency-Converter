@@ -51,6 +51,35 @@ public class BasicCurrencyConverter implements CurrencyConverter {
         return rate;
     }
 
+     // Main method for testing purposes
+     public static void main(String[] args) {
+        BasicCurrencyConverter converter = new BasicCurrencyConverter();
+        
+        // Testing the convertCurrency method
+        try {
+            double convertedAmount = converter.convertCurrency("USD", "GBP", 100);
+            System.out.println("Converted amount: " + convertedAmount);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        // Testing the getCurrencyCodes method
+        String[] codes = converter.getCurrencyCodes();
+        System.out.println("Available currency codes:");
+        for (String code : codes) {
+            System.out.println(code);
+        }
+
+        // Testing the getExchangeRate method
+        try {
+            double exchangeRate = converter.getExchangeRate("USD", "EUR");
+            System.out.println("Exchange rate USD to EUR: " + exchangeRate);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
  
 
      
