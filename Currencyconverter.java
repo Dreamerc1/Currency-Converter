@@ -1,4 +1,4 @@
-public interface Currencyconverter {
+public interface CurrencyConverter {
       // Method to convert a currency amount from source to destination currency
       double convertCurrency(String sourceCurrencyCode, String destinationCurrencyCode, double amount);
 
