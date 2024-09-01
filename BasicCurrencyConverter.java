@@ -9,5 +9,12 @@ public class BasicCurrencyConverter {
         Scanner scanner = new Scanner(System.in);
         double amountInUSD = 0;
         System.out.print("Enter amount in USD: ");
+    // Step 3: Handle potential input errors
+         try {
+            amountInUSD = scanner.nextDouble();
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter a numeric value.");
+            return;  // Exit the program if the input is invalid
+        }
 
   
